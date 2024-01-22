@@ -49,6 +49,28 @@ body {
   background-color: #55b9a9;
 }
 
+.heading::before {
+  position: absolute;
+  top: 0;
+  right: -114px;
+  transform: translateY(25%);
+  content: "2012 - 2007";
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.item:nth-child(2) .heading::before {
+  content: "2016 - 2012";
+}
+
+.item:nth-child(3) .heading::before {
+  content: "2018 - 2016";
+}
+
+.item:nth-child(4) .heading::before {
+  content: "2022 - 2018";
+}
+
 .title {
   margin: 20px 0;
   padding: 10px 30px 50px 0;
