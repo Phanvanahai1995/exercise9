@@ -106,6 +106,7 @@ a {
 a:hover {
   background: #a26f5a;
   color: #fff;
+  border-color: #a26f5a;
 }
 
 .column-right {
