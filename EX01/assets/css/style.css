@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  width: 1140px;
+  width: 1400px;
   margin: 50px auto 0 auto;
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 .column-left {
-  width: 40%;
+  width: 30%;
 }
 
 .heading {
@@ -51,9 +51,10 @@ body {
 
 .heading::before {
   position: absolute;
-  top: 0;
+  display: inline-block;
+  bottom: 0;
   right: -114px;
-  transform: translateY(25%);
+  transform: translateY(-50%);
   content: "2012 - 2007";
   font-size: 1.6rem;
   font-weight: 400;
@@ -103,16 +104,10 @@ a {
   transition: 0.5s;
 }
 
-a:hover {
-  background: #a26f5a;
-  color: #fff;
-  border-color: #a26f5a;
-}
-
 .column-right {
   display: flex;
   justify-content: end;
-  width: 60%;
+  width: 70%;
 }
 
 .image {
@@ -164,4 +159,58 @@ a:hover {
   bottom: 32px;
   right: 10px;
   color: #fff;
+}
+
+.item {
+  transition: 0.8s;
+}
+
+.item:hover {
+  transform-origin: top right;
+  transform: rotateY(-180deg);
+}
+
+.item:hover .heading {
+  transform: scale(-1, 1);
+  padding-left: 30px;
+  text-align: left;
+}
+
+.item:hover .heading::before {
+  content: "2007-2012";
+  width: 100px;
+  right: 430px;
+}
+
+.item:nth-child(2):hover .heading::before {
+  content: "2012 - 2016";
+}
+
+.item:nth-child(3):hover .heading::before {
+  content: "2016 - 2018";
+}
+
+.item:nth-child(4):hover .heading::before {
+  content: "2018 - 2022";
+}
+
+.item:hover .heading::after {
+  top: 0;
+  left: -23px;
+}
+
+.item:hover .desc {
+  transform: scale(-1, 1);
+  text-align: left;
+}
+
+.item:hover a {
+  transform: scale(-1, 1);
+}
+
+a:hover {
+  transform: scale(-1, 1);
+  background: #a26f5a;
+  color: #fff;
+  border-color: #a26f5a;
 }
